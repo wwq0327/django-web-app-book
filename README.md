@@ -18,3 +18,9 @@
 
 - python 2.7
 - django 1.6
+
+## 开发环境
+
+- Ubuntu
+- Mac OS X
+
