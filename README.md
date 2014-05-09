@@ -10,6 +10,12 @@
 
 如果你也使用Django做Web开发，而这本书有些东西你很看不惯，那么，你就可以加入到本书的编写中来。
 
+## 交流与讨论
+
+你可以在Issue中参与讨论或给我们意见或建议：
+
+<https://github.com/wwq0327/django-web-app-book/issues>
+
 ## 如何阅读
 
 本项目分两部分内容，一书籍内容，使用Markdown编写，位于目录`ebook`中，二是开发中所用的代码内容，位于`examples`这个目录中。
