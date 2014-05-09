@@ -13,3 +13,8 @@
 ## 开始阅读
 
 [开始阅读](ebook/content.md)
+
+## 语言求要
+
+- python 2.7
+- django 1.6

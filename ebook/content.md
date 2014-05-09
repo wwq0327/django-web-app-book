@@ -1,7 +1,6 @@
 * [Django环境配置](01.0.md)
  - [Virtualenv 安装](01.1.md)
  - [Django 安装](01.2.md)
- - [项目结构](01.3.md)
 * [Hello, Django](02.0.md)
  - [项目生成](02.1.md)
  - [运行服务](02.2.md)
