@@ -22,7 +22,7 @@
 
 ## 开始阅读
 
-[开始阅读](ebook/content.md)
+[开始阅读](ebook/SUMMARY.md)
 
 ## 实战项目地址：
 

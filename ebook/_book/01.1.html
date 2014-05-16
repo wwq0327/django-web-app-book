@@ -1,0 +1,540 @@
+<!DOCTYPE HTML>
+<html lang="en-US" manifest="./manifest.appcache">
+    <head prefix="og: http://ogp.me/ns# book: http://ogp.me/ns/book#">
+        
+        <meta charset="UTF-8">
+        <title>Virtualenv 安装 | </title>
+
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="robots" content="index, follow">
+        <meta name="author" content="wwq0327">
+        <meta name="description" content="这些一本关于Django Web编程的书写，希望大家喜欢。">
+        <meta name="keywords" content="gitbook,github" >
+        <meta name="generator" content="www.gitbook.io">
+
+        
+        <link rel="next" href="./01.2.html" />
+        
+        
+        <link rel="prev" href="./01.0.html" />
+        
+
+        <meta property="og:title" content="Virtualenv 安装 | ">
+        <meta property="og:site_name" content="">
+        <meta property="og:type" content="book">
+        <meta property="og:locale" content="en_US">
+
+        <meta property="book:author" content="https://github.com/wwq0327">
+        <meta property="book:tag" content="GitBook">
+
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+        <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+        
+    </head>
+    <body>
+        
+
+        <link rel="stylesheet" href="gitbook/style.css">
+        
+
+
+        
+    <div class="book" data-github="wwq0327/django-web-app-book" data-level="1.1" data-basepath="." data-revision="1400231924695">
+    <div class="book-header">
+    <!-- Actions Left -->
+    
+    <a href="https://github.com/wwq0327/django-web-app-book" target="_blank" class="btn pull-left"><i class="fa fa-bookmark-o"></i></a>
+    
+    <a href="#" class="btn pull-left toggle-summary"><i class="fa fa-align-justify"></i></a>
+    <a href="#" class="btn pull-left toggle-search"><i class="fa fa-search"></i></a>
+    <span id="font-settings-wrapper">
+        <a href="#" class="btn pull-left toggle-font-settings"><i class="fa fa-font"></i>
+        </a>
+        <div class="dropdown-menu font-settings">
+	<div class="dropdown-caret">
+  <span class="caret-outer"></span>
+  <span class="caret-inner"></span>
+</div>
+
+	<div class="btn-group btn-block">
+		<button id="reduce-font-size" class="btn btn-default">A</button>
+		<button id="enlarge-font-size" class="btn btn-default">A</button>
+	</div>
+
+	<ul class="list-group font-family-list">
+		<li class="list-group-item" data-font="0">Serif</li>
+		<li class="list-group-item" data-font="1">Sans</li>
+	</ul>
+
+	<div class="btn-group btn-group-xs btn-block color-theme-list">
+	  <button type="button" class="btn btn-default" id="color-theme-preview-0" data-theme="0">White</button>
+	  <button type="button" class="btn btn-default" id="color-theme-preview-1" data-theme="1">Sepia</button>
+	  <button type="button" class="btn btn-default" id="color-theme-preview-2" data-theme="2">Night</button>
+	</div>
+</div>
+
+    </span>
+
+    <!-- Actions Right -->
+    
+    <a href="#" target="_blank" class="btn pull-right" data-sharing="google-plus"><i class="fa fa-google-plus"></i></a>
+    
+    
+    <a href="#" target="_blank" class="btn pull-right" data-sharing="facebook"><i class="fa fa-facebook"></i></a>
+    
+    
+    <a href="#" target="_blank" class="btn pull-right" data-sharing="twitter"><i class="fa fa-twitter"></i></a>
+    
+
+    
+    <a href="https://github.com/wwq0327/django-web-app-book/stargazers" target="_blank" class="btn pull-right count-star hidden-xs"><i class="fa fa-star-o"></i> Star (<span>-</span>)</a>
+    <a href="https://github.com/wwq0327/django-web-app-book/watchers" target="_blank" class="btn pull-right count-watch hidden-xs"><i class="fa fa-eye"></i> Watch (<span>-</span>)</a>
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-spinner fa-spin"></i>
+        <a href="./" ></a>
+    </h1>
+</div>
+
+    <div class="book-summary">
+    <div class="book-search">
+        <input type="text" placeholder="Search" class="form-control" />
+    </div>
+    <ul class="summary">
+        
+        <li>
+            <a href="https://github.com/wwq0327" target="blank">About the author</a>
+        </li>
+        
+
+        
+        <li>
+            <a href="https://github.com/wwq0327/django-web-app-book/issues" target="blank">Questions and Issues</a>
+        </li>
+        
+
+        
+        <li>
+            <a href="https://github.com/wwq0327/django-web-app-book/edit/master/01.1.md" target="blank">Edit and Contribute</a>
+        </li>
+        
+
+        
+        <li class="divider"></li>
+        
+
+        <li data-level="0" data-path="index.html">
+            <a href="./"><i class="fa fa-check"></i> Introduction</a>
+        </li>
+        
+            <li  data-level="1" data-path="01.0.html">
+                
+                <a href="./01.0.html">
+                    <i class="fa fa-check"></i> <b>1.</b> Django环境配置
+                </a>
+                
+                
+                <ul class="articles">
+                    
+                        <li  data-level="1.1" data-path="01.1.html">
+                            
+                            <a href="./01.1.html">
+                                <i class="fa fa-check"></i> <b>1.1.</b> Virtualenv 安装
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="1.2" data-path="01.2.html">
+                            
+                            <a href="./01.2.html">
+                                <i class="fa fa-check"></i> <b>1.2.</b> Django 安装
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="1.3" data-path="01.3.html">
+                            
+                            <a href="./01.3.html">
+                                <i class="fa fa-check"></i> <b>1.3.</b> 安装ipython
+                            </a>
+                            
+                        </li>
+                    
+                </ul>
+                
+            </li>
+        
+            <li  data-level="2" data-path="02.0.html">
+                
+                <a href="./02.0.html">
+                    <i class="fa fa-check"></i> <b>2.</b> 第一个Django项目
+                </a>
+                
+                
+                <ul class="articles">
+                    
+                        <li  data-level="2.1" data-path="02.1.html">
+                            
+                            <a href="./02.1.html">
+                                <i class="fa fa-check"></i> <b>2.1.</b> 项目生成
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="2.2" data-path="02.2.html">
+                            
+                            <a href="./02.2.html">
+                                <i class="fa fa-check"></i> <b>2.2.</b> 运行服务
+                            </a>
+                            
+                        </li>
+                    
+                </ul>
+                
+            </li>
+        
+            <li  data-level="3" data-path="03.0.html">
+                
+                <a href="./03.0.html">
+                    <i class="fa fa-check"></i> <b>3.</b> 编写一个博客程序
+                </a>
+                
+                
+                <ul class="articles">
+                    
+                        <li  data-level="3.1" data-path="03.1.html">
+                            
+                            <a href="./03.1.html">
+                                <i class="fa fa-check"></i> <b>3.1.</b> 需求要求
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="3.2" data-path="03.2.html">
+                            
+                            <a href="./03.2.html">
+                                <i class="fa fa-check"></i> <b>3.2.</b> 项目生成
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="3.3" data-path="03.3.html">
+                            
+                            <a href="./03.3.html">
+                                <i class="fa fa-check"></i> <b>3.3.</b> settings.py配置
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="3.4" data-path="03.4.html">
+                            
+                            <a href="./03.4.html">
+                                <i class="fa fa-check"></i> <b>3.4.</b> 编写数据模型：Models
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="3.5" data-path="03.5.html">
+                            
+                            <a href="./03.5.html">
+                                <i class="fa fa-check"></i> <b>3.5.</b> 编写Views
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="3.6" data-path="03.6.html">
+                            
+                            <a href="./03.6.html">
+                                <i class="fa fa-check"></i> <b>3.6.</b> urls配置
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="3.7" data-path="03.7.html">
+                            
+                            <a href="./03.7.html">
+                                <i class="fa fa-check"></i> <b>3.7.</b> 模版templates
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="3.8" data-path="03.8.html">
+                            
+                            <a href="./03.8.html">
+                                <i class="fa fa-check"></i> <b>3.8.</b> Admin后台管理
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="3.9" data-path="03.9.html">
+                            
+                            <a href="./03.9.html">
+                                <i class="fa fa-check"></i> <b>3.9.</b> 文章分类及侧边栏
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="3.10" data-path="03.10.html">
+                            
+                            <a href="./03.10.html">
+                                <i class="fa fa-check"></i> <b>3.10.</b> markdown 与自订义tag
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="3.11" >
+                            
+                            <span><b>3.11.</b> 成果</span>
+                            
+                        </li>
+                    
+                </ul>
+                
+            </li>
+        
+            <li  data-level="4" >
+                
+                <span><b>4.</b> 编写一个论坛程序</span>
+                
+                
+                <ul class="articles">
+                    
+                        <li  data-level="4.1" >
+                            
+                            <span><b>4.1.</b> 需求分析</span>
+                            
+                        </li>
+                    
+                        <li  data-level="4.2" >
+                            
+                            <span><b>4.2.</b> 用户系统</span>
+                            
+                        </li>
+                    
+                        <li  data-level="4.3" >
+                            
+                            <span><b>4.3.</b> 话题系统</span>
+                            
+                        </li>
+                    
+                        <li  data-level="4.4" >
+                            
+                            <span><b>4.4.</b> 评论系统</span>
+                            
+                        </li>
+                    
+                        <li  data-level="4.5" >
+                            
+                            <span><b>4.5.</b> 收藏系统</span>
+                            
+                        </li>
+                    
+                        <li  data-level="4.6" >
+                            
+                            <span><b>4.6.</b> 成果</span>
+                            
+                        </li>
+                    
+                </ul>
+                
+            </li>
+        
+            <li  data-level="5" >
+                
+                <span><b>5.</b> 应用部署</span>
+                
+                
+                <ul class="articles">
+                    
+                        <li  data-level="5.1" >
+                            
+                            <span><b>5.1.</b> 服务器安装</span>
+                            
+                        </li>
+                    
+                        <li  data-level="5.2" >
+                            
+                            <span><b>5.2.</b> Nginx安装及设置</span>
+                            
+                        </li>
+                    
+                        <li  data-level="5.3" >
+                            
+                            <span><b>5.3.</b> MySQL数据库安装</span>
+                            
+                        </li>
+                    
+                        <li  data-level="5.4" >
+                            
+                            <span><b>5.4.</b> 代码部署</span>
+                            
+                        </li>
+                    
+                </ul>
+                
+            </li>
+        
+
+        
+        <li class="divider"></li>
+        <li>
+            <a href="http://www.gitbook.io/" target="blank">Generated using GitBook</a>
+        </li>
+        
+    </ul>
+</div>
+
+    <div class="book-body">
+        <div class="body-inner">
+            <div class="page-wrapper" tabindex="-1">
+                <div class="book-progress">
+    <div class="bar">
+        <div class="inner" style="width: 11.11111111111111%;min-width: 5.555555555555555%;"></div>
+    </div>
+    <div class="chapters">
+    
+        <a href="./index.html" title="Introduction" class="chapter done new-chapter" data-progress="0" style="left: 0%;"></a>
+    
+        <a href="./01.0.html" title="Django环境配置" class="chapter done new-chapter" data-progress="1" style="left: 5.555555555555555%;"></a>
+    
+        <a href="./01.1.html" title="Virtualenv 安装" class="chapter done " data-progress="1.1" style="left: 11.11111111111111%;"></a>
+    
+        <a href="./01.2.html" title="Django 安装" class="chapter  " data-progress="1.2" style="left: 16.666666666666668%;"></a>
+    
+        <a href="./01.3.html" title="安装ipython" class="chapter  " data-progress="1.3" style="left: 22.22222222222222%;"></a>
+    
+        <a href="./02.0.html" title="第一个Django项目" class="chapter  new-chapter" data-progress="2" style="left: 27.77777777777778%;"></a>
+    
+        <a href="./02.1.html" title="项目生成" class="chapter  " data-progress="2.1" style="left: 33.333333333333336%;"></a>
+    
+        <a href="./02.2.html" title="运行服务" class="chapter  " data-progress="2.2" style="left: 38.888888888888886%;"></a>
+    
+        <a href="./03.0.html" title="编写一个博客程序" class="chapter  new-chapter" data-progress="3" style="left: 44.44444444444444%;"></a>
+    
+        <a href="./03.1.html" title="需求要求" class="chapter  " data-progress="3.1" style="left: 50%;"></a>
+    
+        <a href="./03.10.html" title="markdown 与自订义tag" class="chapter  " data-progress="3.10" style="left: 55.55555555555556%;"></a>
+    
+        <a href="./03.2.html" title="项目生成" class="chapter  " data-progress="3.2" style="left: 61.111111111111114%;"></a>
+    
+        <a href="./03.3.html" title="settings.py配置" class="chapter  " data-progress="3.3" style="left: 66.66666666666667%;"></a>
+    
+        <a href="./03.4.html" title="编写数据模型：Models" class="chapter  " data-progress="3.4" style="left: 72.22222222222223%;"></a>
+    
+        <a href="./03.5.html" title="编写Views" class="chapter  " data-progress="3.5" style="left: 77.77777777777777%;"></a>
+    
+        <a href="./03.6.html" title="urls配置" class="chapter  " data-progress="3.6" style="left: 83.33333333333333%;"></a>
+    
+        <a href="./03.7.html" title="模版templates" class="chapter  " data-progress="3.7" style="left: 88.88888888888889%;"></a>
+    
+        <a href="./03.8.html" title="Admin后台管理" class="chapter  " data-progress="3.8" style="left: 94.44444444444444%;"></a>
+    
+        <a href="./03.9.html" title="文章分类及侧边栏" class="chapter  " data-progress="3.9" style="left: 100%;"></a>
+    
+    </div>
+</div>
+
+                <div class="page-inner">
+                
+                    <section class="normal" id="section-gitbook_2">
+                    
+                        <h1 id="virtualenv-">Virtualenv 安装</h1>
+<p>如果你和我一样，在做Django应用开发中喜欢使用一些Django第三方扩展来进行Django的快速开发，那么可能就会在自己的Linux系统中的Python目录中大量的安装过一些扩展库了，但A应用用到的扩展B应用又不一定需要用到。当然一个应用开发完成，可以需要写一些安装手册这类的，这时你可能会有些茫然，到底哪些扩展是自己这个应用所用到的？这样看来一个“干净”的开发环境还是很有必要的。</p>
+<p>利用Virtualenv能快速的搞定这样一个开发环境，事实上不仅仅是Django需要，你在做任何Python开发的的时候，都可以考虑做这么一个“干净”的虚拟环境来进行开发，这样就不必担心搞乱自己的Python主目录时的库程序了。</p>
+<p>具体面言，做这么一个开发环境，可能会需要用到<code>pip</code>，<code>virtualenv</code>，<code>easy_install</code>。</p>
+<p>在Fedora/Ubuntu中，有一个python-setuptools模块，可以直接装easy_install代码来安装：</p>
+<pre><code class="lang-bash">$ wget -q http://peak.telecommunity.com/dist/ez_setup.py
+</code></pre>
+<blockquote>
+<p>执行安装时，需要用到管理员权限。</p>
+</blockquote>
+<p>下面一步，安装virtualenv。</p>
+<p>仍然是管理员权限进行安装，命令：</p>
+<pre><code class="lang-bash">$ <span class="hljs-built_in">sudo</span> easy_install virtualenv
+</code></pre>
+<p>这步完成后，以后就可以进接使用virtualenv来进行Python开发环境的创建了。</p>
+<p>1.环境创建</p>
+<pre><code class="lang-bash">$ virtualenv mysite
+New python executable <span class="hljs-keyword">in</span> mysite/bin/python
+Installing setuptools............done.
+Installing pip...............done.
+</code></pre>
+<p>这时会在mysite目录中生成三个Python所需的目录，如笔记在在Mac OS下目录是这样的：</p>
+<pre><code class="lang-bash">$ tree mysite -L <span class="hljs-number">2</span>
+mysite
+├── bin
+│   ├── activate
+│   ├── activate.csh
+│   ├── activate.fish
+│   ├── activate_this.py
+│   ├── easy_install
+│   ├── easy_install-<span class="hljs-number">2.7</span>
+│   ├── pip
+│   ├── pip-<span class="hljs-number">2.7</span>
+│   ├── python
+│   ├── python2 -&gt; python
+│   └── python2.<span class="hljs-number">7</span> -&gt; python
+├── include
+│   └── python2.<span class="hljs-number">7</span> -&gt; /System/Library/Frameworks/Python.framework/Versions/<span class="hljs-number">2.7</span>/include/python2.<span class="hljs-number">7</span>
+└── lib
+    └── python2.<span class="hljs-number">7</span>
+</code></pre>
+<p>2.启用虚拟环境</p>
+<p>进入<code>mysite</code>目录，执行：</p>
+<pre><code class="lang-bash">$ <span class="hljs-built_in">source</span> bin/activate
+</code></pre>
+<p>这里你会发现原来的命令提示符发生了变化，多了一个括号，里面的字符即为你所创建的虚拟环境的名称,像这样：</p>
+<pre><code class="lang-bash">(mysite)wyattdeMacBook-Pro:tmp wyatt$
+</code></pre>
+<p>接下来的所有模块的安装，都只会直接安装到项目目录中去。</p>
+
+                    
+                    </section>
+                
+                </div>
+            </div>
+        </div>
+
+        
+        <a href="./01.0.html" class="navigation navigation-prev "><i class="fa fa-angle-left"></i></a>
+        
+        
+        <a href="./01.2.html" class="navigation navigation-next "><i class="fa fa-angle-right"></i></a>
+        
+    </div>
+</div>
+
+        
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.1.3/ace.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.1.3/mode-javascript.js"></script>
+        <script src="gitbook/jsrepl/jsrepl.js" id="jsrepl-script"></script>
+        <script src="gitbook/app.js"></script>
+        
+
+    
+    <script src="gitbook/plugins/gitbook-plugin-mixpanel/plugin.js"></script>
+    
+
+    
+    <script src="http://cdn.mathjax.org/mathjax/2.0-latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+
+    
+    <script src="gitbook/plugins/gitbook-plugin-mathjax/plugin.js"></script>
+    
+
+<script>
+require(["gitbook"], function(gitbook) {
+    var config = {};
+    gitbook.start(config);
+});
+</script>
+
+    </body>
+</html>
