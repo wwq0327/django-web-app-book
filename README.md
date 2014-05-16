@@ -24,6 +24,10 @@
 
 [开始阅读](ebook/content.md)
 
+## 实战项目地址：
+
+- 博客项目地址：<https://github.com/wwq0327/djwebapp-blog>
+
 ## 语言求要
 
 - python 2.7
