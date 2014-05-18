@@ -7,4 +7,4 @@ Django 环境配置
 
 - [Virtualenv 安装](01.1.md)
 - [Django 安装](01.2.md)
-- [安装ipython](01.3.md)
+- [安装iPython](01.3.md)

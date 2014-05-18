@@ -8,7 +8,7 @@
 
 ## 欢迎参与共创
 
-如果你也使用Django做Web开发，而这本书有些东西你很看不惯，那么，你就可以加入到本书的编写中来。
+本书还在编写中，如果你也使用Django做Web开发，而这本书有些东西你很看不惯，那么，你就可以加入到本书的编写中来。
 
 ## 交流与讨论
 
@@ -18,21 +18,11 @@
 
 ## 开始阅读
 
-[开始阅读](http://django-web-app-book.wanqingwong.com)
+在线阅读地址：<http://django-web-app-book.wanqingwong.com>
 
 ## 实战项目地址：
 
 - 博客项目地址：<https://github.com/wwq0327/djwebapp-blog>
-
-## 语言求要
-
-- python 2.7
-- django 1.6
-
-## 开发环境
-
-- Ubuntu
-- Mac OS X
 
 ## 项目生成
 
@@ -40,3 +30,12 @@
 - 使用Gitbook生成。
 - 使用Markdown语法格式。
 
+## 语言求要
+
+- Python 2.7
+- Django 1.6
+
+## 开发环境
+
+- Ubuntu
+- Mac OS X
