@@ -42,7 +42,7 @@
 
 
         
-    <div class="book" data-github="wwq0327/django-web-app-book" data-level="1.2" data-basepath=".." data-revision="1400381986681">
+    <div class="book" data-github="wwq0327/django-web-app-book" data-level="1.2" data-basepath=".." data-revision="1400382840799">
     <div class="book-header">
     <!-- Actions Left -->
     
@@ -448,16 +448,17 @@
                     <section class="normal" id="section-gitbook_14">
                     
                         <h1 id="django-">Django 安装</h1>
-<h2 id="-pip-django">使用pip方式安装django</h2>
+<h2 id="-pip-django">使用PIP方式安装Django</h2>
 <p>使用PIP进行Django的安装，命令：</p>
 <pre><code class="lang-bash">$ pip install django==<span class="hljs-number">1.6</span>.<span class="hljs-number">4</span>
 </code></pre>
 <blockquote>
 <p>在使用pip安装时，可以指定相应软件的版本号，如上面的的示例。</p>
 <p>由于功夫网的原因，有些时候在使用pip进行安装上，速度会很慢或是访问超时的问题，你可以修改一下<code>~/.pip/pip.conf</code>这个文件，换用豆瓣的pypi源，内容为：</p>
-<p>[global]</p>
-<p>index-url = <a href="http://pypi.douban.com/simple" target="_blank">http://pypi.douban.com/simple</a></p>
 </blockquote>
+<pre><code class="lang-bash">[global]
+index-url = http://pypi.douban.com/simple
+</code></pre>
 <h2 id="-">从源码安装</h2>
 <p>从源码安装Django，方式如下：</p>
 <pre><code class="lang-bash">$ wget https://www.djangoproject.com/m/releases/<span class="hljs-number">1.6</span>/Django-<span class="hljs-number">1.6</span>.<span class="hljs-number">4</span>.tar.gz
@@ -481,7 +482,7 @@ Out[<span class="hljs-number">2</span>]: (<span class="hljs-number">1</span>, <s
 <p>2.安装</p>
 <pre><code class="lang-bash">$ pip install -r prj.txt
 </code></pre>
-<p>自动装所有模块一次些安装完成。</p>
+<p>自动装所有模块一次性全部安装。</p>
 <p>需要注意的是，你每次开始继续开发项目的时候，都需要使用source进入到虚拟环境后才可以正确的进行项目的开发。</p>
 
                     
