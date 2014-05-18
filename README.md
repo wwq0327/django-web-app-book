@@ -16,13 +16,9 @@
 
 <https://github.com/wwq0327/django-web-app-book/issues>
 
-## 如何阅读
-
-本项目分两部分内容，一书籍内容，使用Markdown编写，位于目录`ebook`中，二是开发中所用的代码内容，位于`examples`这个目录中。
-
 ## 开始阅读
 
-[开始阅读](ebook/SUMMARY.md)
+[开始阅读](http://django-web-app-book.wanqingwong.com)
 
 ## 实战项目地址：
 
@@ -37,4 +33,10 @@
 
 - Ubuntu
 - Mac OS X
+
+## 项目生成
+
+- 仓库地址： <https://github.com/wwq0327/django-web-app-book>。
+- 使用Gitbook生成。
+- 使用Markdown语法格式。
 
