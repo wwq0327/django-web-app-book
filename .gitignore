@@ -2,7 +2,7 @@
 __pycache__/
 *.py[cod]
 *~
-
+_book/*
 # C extensions
 *.so
 
