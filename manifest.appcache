@@ -1,5 +1,5 @@
 CACHE MANIFEST
-# Revision 1400730972517
+# Revision 1400731181717
 
 CACHE:
 index.html
@@ -10,11 +10,11 @@ djblog/03.3.html
 djblog/03.4.html
 djblog/03.10.html
 djblog/03.6.html
-djblog/03.8.html
 djblog/03.7.html
+djblog/03.8.html
 djblog/03.9.html
-djblog/README.html
 djenv/01.1.html
+djblog/README.html
 djenv/01.2.html
 djenv/01.3.html
 djenv/README.html
