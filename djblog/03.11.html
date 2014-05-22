@@ -3,7 +3,7 @@
     <head prefix="og: http://ogp.me/ns# book: http://ogp.me/ns/book#">
         
         <meta charset="UTF-8">
-        <title>编写一个博客程序 | Django Web 开发实战</title>
+        <title>文章分页功能 | Django Web 开发实战</title>
 
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
         <meta name="robots" content="index, follow">
@@ -13,13 +13,13 @@
         <meta name="generator" content="www.gitbook.io">
 
         
-        <link rel="next" href="../djblog/03.1.html" />
+        <link rel="next" href="../djblog/blog-end.html" />
         
         
-        <link rel="prev" href="../firstprj/02.2.html" />
+        <link rel="prev" href="../djblog/03.10.html" />
         
 
-        <meta property="og:title" content="编写一个博客程序 | Django Web 开发实战">
+        <meta property="og:title" content="文章分页功能 | Django Web 开发实战">
         <meta property="og:site_name" content="Django Web 开发实战">
         <meta property="og:type" content="book">
         <meta property="og:locale" content="en_US">
@@ -42,7 +42,7 @@
 
 
         
-    <div class="book" data-github="wwq0327/django-web-app-book" data-level="3" data-basepath=".." data-revision="1400738768921">
+    <div class="book" data-github="wwq0327/django-web-app-book" data-level="3.11" data-basepath=".." data-revision="1400738768921">
     <div class="book-header">
     <!-- Actions Left -->
     
@@ -120,7 +120,7 @@
 
         
         <li>
-            <a href="https://github.com/wwq0327/django-web-app-book/edit/master/djblog/README.md" target="blank">Edit and Contribute</a>
+            <a href="https://github.com/wwq0327/django-web-app-book/edit/master/djblog/03.11.md" target="blank">Edit and Contribute</a>
         </li>
         
 
@@ -404,7 +404,7 @@
             <div class="page-wrapper" tabindex="-1">
                 <div class="book-progress">
     <div class="bar">
-        <div class="inner" style="width: 40%;min-width: 35%;"></div>
+        <div class="inner" style="width: 55%;min-width: 50%;"></div>
     </div>
     <div class="chapters">
     
@@ -426,11 +426,11 @@
     
         <a href="../djblog/README.html" title="编写一个博客程序" class="chapter done new-chapter" data-progress="3" style="left: 40%;"></a>
     
-        <a href="../djblog/03.1.html" title="需求要求" class="chapter  " data-progress="3.1" style="left: 45%;"></a>
+        <a href="../djblog/03.1.html" title="需求要求" class="chapter done " data-progress="3.1" style="left: 45%;"></a>
     
-        <a href="../djblog/03.10.html" title="markdown 与自订义tag" class="chapter  " data-progress="3.10" style="left: 50%;"></a>
+        <a href="../djblog/03.10.html" title="markdown 与自订义tag" class="chapter done " data-progress="3.10" style="left: 50%;"></a>
     
-        <a href="../djblog/03.11.html" title="文章分页功能" class="chapter  " data-progress="3.11" style="left: 55%;"></a>
+        <a href="../djblog/03.11.html" title="文章分页功能" class="chapter done " data-progress="3.11" style="left: 55%;"></a>
     
         <a href="../djblog/blog-end.html" title="成果" class="chapter  " data-progress="3.12" style="left: 60%;"></a>
     
@@ -455,17 +455,130 @@
 
                 <div class="page-inner">
                 
-                    <section class="normal" id="section-gitbook_13">
+                    <section class="normal" id="section-gitbook_4">
                     
-                        <h1 id="-">编写一个博客程序</h1>
-<p>本节内容将展示使用django来编写一个博客应用，我们会使用到<code>Bootstrap</code>这个CSS框架，数据库方使用，我们Django默认的<code>sqlite3</code>小型数据库。</p>
-<p>本项目我们使用单独的代码仓库来存放，在址在：</p>
-<blockquote>
-<p><a href="https://github.com/wwq0327/djwebapp-blog" target="_blank">https://github.com/wwq0327/djwebapp-blog</a></p>
-</blockquote>
-<p><strong>本节内容：</strong></p>
-<p>-
--</p>
+                        <h1 id="-">文章分页功能</h1>
+<p>文章多起来了，我们就需要一个分页功能了，像这样：</p>
+<p><img src="http://ww2.sinaimg.cn/large/603daed6gw1egmza4i74sj20f20383yf.jpg" alt=""></p>
+<p>如何添加上这个功能呢？Django自带有分页功能的，但我们这里使用一个处理分页的第三方插件<code>linaro-django-pagination</code>。</p>
+<h2 id="-">安装方法</h2>
+<pre><code class="lang-bash">$ pip install linaro-django-pagination
+</code></pre>
+<h2 id="-">设置</h2>
+<p>插件的设置是在<code>settings.py</code>中进行的，我们进行以下设置：</p>
+<p>1.添加到<code>INSTALL_APP</code>，像这样：</p>
+<pre><code>INSTALLED_APPS = (
+    # ...
+    &#39;linaro_django_pagination&#39;,
+)
+</code></pre><p>2.安装中间件：</p>
+<pre><code>MIDDLEWARE_CLASSES = (
+    # ...
+    &#39;linaro_django_pagination.middleware.PaginationMiddleware&#39;,
+)
+</code></pre><p>3.设置<code>TEMPLATE_CONTEXT_PROCESSORS</code></p>
+<p>这里需要注意一下，Django 1.6之后，在<code>settings.py</code>已没有这一项了，而只作为了一个默认设置项存在的，你可以Shell中查看认项：</p>
+<pre><code class="lang-bash">In [<span class="hljs-number">1</span>]: from django.conf import settings
+In [<span class="hljs-number">2</span>]: settings.TEMPLATE_CONTEXT_PROCESSORS
+Out[<span class="hljs-number">2</span>]:
+(<span class="hljs-string">'django.contrib.auth.context_processors.auth'</span>,
+ <span class="hljs-string">'django.core.context_processors.debug'</span>,
+ <span class="hljs-string">'django.core.context_processors.i18n'</span>,
+ <span class="hljs-string">'django.core.context_processors.media'</span>,
+ <span class="hljs-string">'django.core.context_processors.static'</span>,
+ <span class="hljs-string">'django.core.context_processors.tz'</span>,
+ <span class="hljs-string">'django.contrib.messages.context_processors.messages'</span>)
+</code></pre>
+<p> 需要注意的是<code>.media</code>和<code>.static</code>这两项。如果你安照<code>linaro-django-pagination</code>文档设置的话，你会发现，你的静态文件无法被浏览器解析了。原因是模版中使用到的参数<code>{{ STATIC_URL}}</code>没有被传递进去，所以<code>.static</code>这项是必须添加上的。</p>
+<p> 在这里，你需要添加上:</p>
+<pre><code>&quot;django.core.context_processors.request&quot;,
+</code></pre><p>4.设置每页显示项数</p>
+<p>关于显示项目，可以有两个地方进行设置，一是在<code>settings.py</code>中，二是在模版文件中，方式分别为：</p>
+<pre><code>## settings.py
+
+PAGINATION_DEFAULT_PAGINATION = 2 # 默认值是20
+
+## 在模版中
+
+{% autopaginate object_list 10 %}
+</code></pre><p>由于我们模版就一个地方使用到分页，所以我们就直接放到<code>settings.py</code>中。暂时设置为每页两项，主要是为了调试样式之类，等开发完成，再行修改即可。</p>
+<h2 id="-">使用</h2>
+<p>使用是在模版中进行的，分三步：</p>
+<p>第一步，载入插件：</p>
+<pre><code class="lang-html">{% load pagination_tags %}
+</code></pre>
+<p>第二步，添加自动分页到项目遍历之前：</p>
+<pre><code>{% autopaginate posts %}
+</code></pre><p>第三步，显示分页：</p>
+<p>在你想要显示的地方，一般为整个项目遍历完成的地方：</p>
+<pre><code>{% paginate %}
+</code></pre><p>整个代码如下：</p>
+<pre><code class="lang-html">{% extends "base.html" %}
+{% load pagination_tags %}
+
+{% block title %}{% if is_category %}“{{ cate_name|safe }}”文章列表{% else %}首页{% endif %}{% endblock %}
+{% block content %}
+{% if is_category %}
+<span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"well well-sm"</span>&gt;</span>
+    “{{ cate_name|safe }}”分类中共有
+    <span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"label label-info"</span>&gt;</span>{{ posts|length}}<span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span>篇：
+<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+{% endif %}
+{% autopaginate posts %}
+{% for post in posts %}
+{% include "blog/_post.html" %}
+{% endfor %}
+{% paginate %}
+{% endblock %}
+
+{% block rightside %}
+{% include "blog/_side.html" %}
+{% endblock %}
+</code></pre>
+<p>然后我们就可以看到分页了。</p>
+<h2 id="-">如何自定义分页样式</h2>
+<p>尽管我们看到了分页，而且也能正常使用的，但和我们的CSS样式不太配合得起来，因为我们可以自己重新来调整一下，使用自定义的模版，只需要在<code>templates/</code>下创建一个与插件模版相同的目录及文件名就行了。最简单的办法就是直接从插件中复制到我们的项目目录中来，然后再生新调整即可。</p>
+<p><code>templates/pagination/pagination.html</code>内容为：</p>
+<pre><code class="lang-html">{% if is_paginated %}
+{% load i18n %}
+<span class="hljs-tag">&lt;<span class="hljs-title">ul</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"pagination"</span>&gt;</span>
+  {% block previouslink %}
+  {% if page_obj.has_previous %}
+  <span class="hljs-tag">&lt;<span class="hljs-title">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"?page{{ page_suffix }}={{ page_obj.previous_page_number }}{{ getvars }}"</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"prev"</span>&gt;</span>{{ previous_link_decorator|safe }}{% trans "previous" %}<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+  {% else %}
+  {% if display_disabled_previous_link %}
+  <span class="hljs-tag">&lt;<span class="hljs-title">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"disabled prev"</span>&gt;</span>{{ previous_link_decorator|safe }}{% trans "previous" %}<span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+  {% endif %}
+  {% endif %}
+  {% endblock previouslink %}
+  {% block pagelinks %}
+  {% if display_page_links %}
+  {% for page in pages %}
+  {% if page %}
+  {% ifequal page page_obj.number %}
+  <span class="hljs-tag">&lt;<span class="hljs-title">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"current page"</span>&gt;</span>{{ page }}<span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+  {% else %}
+  <span class="hljs-tag">&lt;<span class="hljs-title">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"?page{{ page_suffix }}={{ page }}{{ getvars }}"</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"page"</span>&gt;</span>{{ page }}<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+  {% endifequal %}
+  {% else %}
+  <span class="hljs-tag">&lt;<span class="hljs-title">li</span>&gt;</span>...<span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+  {% endif %}
+  {% endfor %}
+  {% endif %}
+  {% endblock pagelinks %}
+  {% block nextlink %}
+  {% if page_obj.has_next %}
+  <span class="hljs-tag">&lt;<span class="hljs-title">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"?page{{ page_suffix }}={{ page_obj.next_page_number }}{{ getvars }}"</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"next"</span>&gt;</span>{% trans "next" %}{{ next_link_decorator|safe }}<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+  {% else %}
+  {% if display_disabled_next_link %}
+  <span class="hljs-tag">&lt;<span class="hljs-title">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"disabled next"</span>&gt;</span>{% trans "next" %}{{ next_link_decorator|safe }}<span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">li</span>&gt;</span>
+  {% endif %}
+  {% endif %}
+  {% endblock nextlink %}
+<span class="hljs-tag">&lt;/<span class="hljs-title">ul</span>&gt;</span>
+{% endif %}
+</code></pre>
+<p>当然你可以根据自己的需要进行调整。</p>
 
                     
                     </section>
@@ -475,10 +588,10 @@
         </div>
 
         
-        <a href="../firstprj/02.2.html" class="navigation navigation-prev "><i class="fa fa-angle-left"></i></a>
+        <a href="../djblog/03.10.html" class="navigation navigation-prev "><i class="fa fa-angle-left"></i></a>
         
         
-        <a href="../djblog/03.1.html" class="navigation navigation-next "><i class="fa fa-angle-right"></i></a>
+        <a href="../djblog/blog-end.html" class="navigation navigation-next "><i class="fa fa-angle-right"></i></a>
         
     </div>
 </div>
