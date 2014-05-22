@@ -16,6 +16,7 @@
  - [Admin后台管理](djblog/03.8.md)
  - [文章分类及侧边栏](djblog/03.9.md)
  - [markdown 与自订义tag](djblog/03.10.md)
+ - [文章分页功能](djblog/03.11.md)
  - [成果](djblog/blog-end.md)
 * [编写一个论坛程序]()
  - [需求分析]()
