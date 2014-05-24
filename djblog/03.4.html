@@ -42,7 +42,7 @@
 
 
         
-    <div class="book" data-github="wwq0327/django-web-app-book" data-level="3.4" data-basepath=".." data-revision="1400738768921">
+    <div class="book" data-github="wwq0327/django-web-app-book" data-level="3.4" data-basepath=".." data-revision="1400933761420">
     <div class="book-header">
     <!-- Actions Left -->
     
@@ -455,7 +455,7 @@
 
                 <div class="page-inner">
                 
-                    <section class="normal" id="section-gitbook_8">
+                    <section class="normal" id="section-gitbook_7">
                     
                         <h1 id="-models">编写数据模型：Models</h1>
 <h2 id="south-">South 安装及简单使用</h2>
@@ -511,6 +511,10 @@ Not synced (use migrations):
 
     <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">__unicode__</span><span class="hljs-params">(self)</span>:</span>
         <span class="hljs-keyword">return</span> self.title
+
+    <span class="hljs-decorator">@models.permalink</span>
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">get_absolute_url</span><span class="hljs-params">(self)</span>:</span>
+        <span class="hljs-keyword">return</span> (<span class="hljs-string">'post'</span>, (), {<span class="hljs-string">'pk'</span>: self.pk})
 </code></pre>
 <p>然后你可以回到终端，查看一下生成的SQL代码：</p>
 <pre><code class="lang-sql">$ ./manage.py sql blog

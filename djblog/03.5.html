@@ -42,7 +42,7 @@
 
 
         
-    <div class="book" data-github="wwq0327/django-web-app-book" data-level="3.5" data-basepath=".." data-revision="1400738768921">
+    <div class="book" data-github="wwq0327/django-web-app-book" data-level="3.5" data-basepath=".." data-revision="1400933761420">
     <div class="book-header">
     <!-- Actions Left -->
     
@@ -460,7 +460,7 @@
                         <h1 id="-views">编写Views</h1>
 <p>在我们这个博客应用中，我们只需要两个视图就行了，一个是Blog列表，另一个是单篇文章，代码是这样的：</p>
 <pre><code class="lang-python"><span class="hljs-comment"># -*- coding: utf-8 -*-</span>
-<span class="hljs-keyword">from</span> django.shortcuts <span class="hljs-keyword">import</span> render_to_response, get_list_or_404, get_object_or_404
+<span class="hljs-keyword">from</span> django.shortcuts <span class="hljs-keyword">import</span> render_to_response, get_object_or_404
 <span class="hljs-keyword">from</span> django.template <span class="hljs-keyword">import</span> RequestContext
 
 <span class="hljs-keyword">from</span> blog.models <span class="hljs-keyword">import</span> Post
@@ -468,7 +468,7 @@
 <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">index</span><span class="hljs-params">(request)</span>:</span>
     <span class="hljs-string">"""blog列表"""</span>
 
-    posts = get_list_or_404(Post)
+    posts = Post.objects.all()
     <span class="hljs-keyword">return</span> render_to_response(<span class="hljs-string">"blog/index.html"</span>,
                   {<span class="hljs-string">"posts"</span>: posts},
                   context_instance=RequestContext(request))
@@ -482,10 +482,10 @@
                   context_instance=RequestContext(request))
 </code></pre>
 <p>库的导入我们分为两个部份，一个是Django自带的，一个是我们的模型。在两个视图中，我们都分另进行了数据的查询操作，如：</p>
-<pre><code class="lang-python">    posts = get_list_or_404(Post)
+<pre><code class="lang-python">post = get_object_or_404(Post, pk=pk)
 </code></pre>
-<p>这里我们使用了<code>django.shortcuts.get_list_or_404</code>，也也可以写成：</p>
-<pre><code class="lang-python">    posts = Post.objects.all()
+<p>这里我们使用了<code>django.shortcuts.get_object_404</code>，也也可以写成：</p>
+<pre><code class="lang-python">    posts = Post.objects.get(pk=pk)
 </code></pre>
 <p>两个方法都是对<code>post</code>进行查询所有数据的操作，但第一种方式，当出现数据条数为0的时候，会报一个<code>Http404</code>的错误，如果你设置了<code>404</code>页面，则会路转到这个页面上。</p>
 <p><code>render_to_response</code>需要三个参数:</p>

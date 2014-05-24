@@ -42,7 +42,7 @@
 
 
         
-    <div class="book" data-github="wwq0327/django-web-app-book" data-level="3.9" data-basepath=".." data-revision="1400738768921">
+    <div class="book" data-github="wwq0327/django-web-app-book" data-level="3.9" data-basepath=".." data-revision="1400933761420">
     <div class="book-header">
     <!-- Actions Left -->
     
@@ -455,7 +455,7 @@
 
                 <div class="page-inner">
                 
-                    <section class="normal" id="section-gitbook_12">
+                    <section class="normal" id="section-gitbook_13">
                     
                         <h1 id="-">文章分类及侧边栏</h1>
 <p>通过前面的操作，我们的博客已具备了内容的添加与展示了，但离一个可以使用成品还是有断距离的，下面我们为博客添加侧边栏，页面，讨论等功能。</p>
@@ -488,7 +488,12 @@ Running migrations <span class="hljs-keyword">for</span> blog:
  - Loading initial data <span class="hljs-keyword">for</span> blog.
 Installed <span class="hljs-number">0</span> object(s) <span class="hljs-keyword">from</span> <span class="hljs-number">0</span> fixture(s)
 </code></pre>
-<p>完成这一步之后，我们就能在<code>admin</code>后台添加分类，并将文章归入相应的分类了。</p>
+<p>同样，我们需要将<code>Category</code>也注册到Admin中，操作方法与<code>Post</code>类似：</p>
+<pre><code># ...
+from blog.models import Category
+# ...
+admin.site.register(Category)
+</code></pre><p>完成这一步之后，我们就能在<code>admin</code>后台添加分类，并将文章归入相应的分类了。</p>
 <h2 id="-">侧边栏</h2>
 <p>我们平时看到的博客，一般侧边栏会放一些个人个信息，文章分类列表，一个登录入口之类的。所有页面的侧边栏都一样的，我们现在两个<code>views</code>，一个是首页的文章列表，一个是文章详细内容。于是我们可以考虑将这部份内容抽取出来，然后使用Django模块的<code>include</code>，引入到需要的模块中去。下面是我们的侧边栏代码：</p>
 <pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"panel panel-default"</span>&gt;</span>

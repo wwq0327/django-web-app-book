@@ -42,7 +42,7 @@
 
 
         
-    <div class="book" data-github="wwq0327/django-web-app-book" data-level="3.6" data-basepath=".." data-revision="1400738768921">
+    <div class="book" data-github="wwq0327/django-web-app-book" data-level="3.6" data-basepath=".." data-revision="1400933761420">
     <div class="book-header">
     <!-- Actions Left -->
     
@@ -455,7 +455,7 @@
 
                 <div class="page-inner">
                 
-                    <section class="normal" id="section-gitbook_9">
+                    <section class="normal" id="section-gitbook_10">
                     
                         <h1 id="url-">URL配置</h1>
 <p>到目前为止，尽管我们已经写出来了视图，但在访问<code>/</code>或是<code>/post/1</code>时，仍不能访问到，因为我们还没有将视图绑定到相应的URL上去。</p>
@@ -464,7 +464,7 @@
 <span class="hljs-keyword">from</span> django.conf.urls <span class="hljs-keyword">import</span> patterns, include, url
 
 urlpatterns = patterns(<span class="hljs-string">''</span>,
-                       url(<span class="hljs-string">r"^"</span>, <span class="hljs-string">"blog.views.index"</span>, name=<span class="hljs-string">"index"</span>),
+                       url(<span class="hljs-string">r"^$"</span>, <span class="hljs-string">"blog.views.index"</span>, name=<span class="hljs-string">"index"</span>),
                        url(<span class="hljs-string">r"^post/(?P&lt;pk&gt;\d+)/$"</span>, <span class="hljs-string">"blog.views.post"</span>, name=<span class="hljs-string">"post"</span>),
 )
 </code></pre>

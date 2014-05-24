@@ -42,7 +42,7 @@
 
 
         
-    <div class="book" data-github="wwq0327/django-web-app-book" data-level="3.7" data-basepath=".." data-revision="1400738768921">
+    <div class="book" data-github="wwq0327/django-web-app-book" data-level="3.7" data-basepath=".." data-revision="1400933761420">
     <div class="book-header">
     <!-- Actions Left -->
     
@@ -455,7 +455,7 @@
 
                 <div class="page-inner">
                 
-                    <section class="normal" id="section-gitbook_10">
+                    <section class="normal" id="section-gitbook_9">
                     
                         <h1 id="-">编写模版</h1>
 <h2 id="-">模版目录结构</h2>
@@ -573,7 +573,7 @@ static/
               <span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"icon-bar"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span>
               <span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"icon-bar"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span>
             <span class="hljs-tag">&lt;/<span class="hljs-title">button</span>&gt;</span>
-            <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"navbar-brand"</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"#"</span>&gt;</span>DJBlog<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"navbar-brand"</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"/"</span>&gt;</span>DJBlog<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
           <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
           <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"collapse navbar-collapse"</span>&gt;</span>
             <span class="hljs-tag">&lt;<span class="hljs-title">ul</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"nav navbar-nav"</span>&gt;</span>
@@ -649,7 +649,7 @@ static/
 {% endfor %}
 {% endblock %}
 </code></pre>
-<p>对于<code>blog/post.html</code>的修改方式类似，代码如下：</p>
+<p>对于文章显示模版，我们新创建一个文件<code>blog/post.html</code>并以类似的方式的进行编写，代码如下：</p>
 <pre><code class="lang-html">{% extends &quot;base.html&quot; %}
 {% block title %}{{ post.title }}{% endblock %}
 {% block content %}
